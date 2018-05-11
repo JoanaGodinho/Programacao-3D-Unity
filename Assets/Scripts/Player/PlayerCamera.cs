@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
 
     public float sensitivityH = 2f;
@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
 
         bodyRot.y += rotAmountH;
 
+        // Check Camera Limits
         if (xRotClamp > 90)
         {
             xRotClamp = 90;
