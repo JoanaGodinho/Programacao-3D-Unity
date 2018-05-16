@@ -11,11 +11,12 @@ public class Door : MonoBehaviour {
         _animator = GetComponent<Animator>();
 	}
 	
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player") && Input.GetButtonDown("Use"))
         {
-            _animator.SetBool("open", true);
+            print("used");
+            _animator.SetBool("open", _animator.GetBool("open") ? false : true);
         }
     }
 
