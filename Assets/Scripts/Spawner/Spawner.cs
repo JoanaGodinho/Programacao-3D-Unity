@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
 
-    public Spawnable spawnObject;
+    public Enemy spawnObject;
+    public GameObject spawnTarget;
     public int maxObjects = 5;
     public int spawnTimeGap = 10;     // seconds
 
@@ -12,8 +13,8 @@ public class Spawner : MonoBehaviour {
     private float elapsedTime = 0;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
 	}
 	
 	// Update is called once per frame
@@ -39,8 +40,9 @@ public class Spawner : MonoBehaviour {
 
     private void Spawn()
     {
-        Spawnable obj = Instantiate(spawnObject, transform.position, transform.rotation);
+        Enemy obj = Instantiate(spawnObject, transform.position, transform.rotation);
         obj.setSpawner(this);
+        obj.setTarget(spawnTarget);
         objectsCounter++;
     }
 }
