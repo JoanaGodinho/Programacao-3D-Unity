@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     public float speed;
+    public int damage = 10;
 
     private Spawner spawner;
     private Seek seek;

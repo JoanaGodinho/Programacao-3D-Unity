@@ -14,7 +14,6 @@ public class Player : MonoBehaviour {
     public Text healthText;
     public Text scoreText;
 
-
     private int defaultHealth;
 
 	// Use this for initialization
@@ -30,6 +29,16 @@ public class Player : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+
+        if (enemy != null)
+        {
+            this.dealDamamge(enemy.damage);
+        }
+    }
 
     public void addScore(int addedScore)
     {

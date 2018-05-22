@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour {
     public Enemy spawnObject;
     public GameObject spawnTarget;
     public int maxObjects = 5;
-    public int spawnTimeGap = 10;     // seconds
+    public float spawnTimeGap = 10;     // seconds
 
     private int objectsCounter = 0;
     private float elapsedTime = 0;
