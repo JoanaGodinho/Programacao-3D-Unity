@@ -27,11 +27,10 @@ public class PlayerShoot : MonoBehaviour {
             if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range, layerMask))
             {
                 Destroy(hit.collider.gameObject);
+                Player player = GetComponent<Player>();
+                player.kills++;
+                Debug.Log(player.kills);
             }
         }
-    }
-
-    private void OnDrawGizmos()
-    {
     }
 }
