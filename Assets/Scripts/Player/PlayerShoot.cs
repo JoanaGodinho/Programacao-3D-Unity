@@ -28,8 +28,7 @@ public class PlayerShoot : MonoBehaviour {
             {
                 Destroy(hit.collider.gameObject);
                 Player player = GetComponent<Player>();
-                player.kills++;
-                Debug.Log(player.kills);
+                player.addScore(1);
             }
         }
     }
