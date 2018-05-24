@@ -8,6 +8,8 @@ public class PlayerShoot : MonoBehaviour {
     public int damage = 10;
     public int range = 50;
     public Camera camera;
+    public ParticleSystem bloodParticles;
+    public ParticleSystem sparkParticles;
 
     private int layerMask = 1;
 
@@ -26,6 +28,7 @@ public class PlayerShoot : MonoBehaviour {
             // If hit
             if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range, layerMask))
             {
+                Instantiate(bloodParticles, hit.point, Quaternion.identity);
                 Destroy(hit.collider.gameObject);
                 Player player = GetComponent<Player>();
                 player.addScore(1);

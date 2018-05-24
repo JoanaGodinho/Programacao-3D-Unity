@@ -1267,6 +1267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   damage: 10
+  seekDistance: 20
 --- !u!136 &136605328929387682
 CapsuleCollider:
   m_ObjectHideFlags: 1
