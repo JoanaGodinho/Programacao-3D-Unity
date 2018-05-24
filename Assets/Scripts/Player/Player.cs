@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -50,7 +51,7 @@ public class Player : MonoBehaviour {
     {
         health -= damage;
 
-        if (health < 0)
+        if (health <= 0)
         {
             health = 0;
             OnPlayerDead();
@@ -72,7 +73,6 @@ public class Player : MonoBehaviour {
 
     private void OnPlayerDead()
     {
-
-
+        SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
     }
 }
