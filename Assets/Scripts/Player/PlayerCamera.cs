@@ -14,15 +14,20 @@ public class PlayerCamera : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // Lock Cursor
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Lock Cursor
-        Cursor.lockState = CursorLockMode.Locked;
-
         rotateCamera();
+    }
+
+    private void OnDestroy()
+    {
+        // Unlock Cursor
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void rotateCamera()
