@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+public static class PlayerStats {
+    public static int score = 0;
+}
+
 public class Player : MonoBehaviour {
 
     private const string HEALTH_TAG = "Health";
@@ -73,6 +77,7 @@ public class Player : MonoBehaviour {
 
     private void OnPlayerDead()
     {
+        PlayerStats.score = this.score;
         SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
     }
 }
