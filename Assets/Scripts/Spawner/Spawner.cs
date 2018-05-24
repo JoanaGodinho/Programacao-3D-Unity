@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour {
     public GameObject spawnTarget;
     public int maxObjects = 5;
     public float spawnTimeGap = 10;     // seconds
+    public float spawnMaxArea = 20;
+    public float spawnMinArea = 10;
 
     private int objectsCounter = 0;
     private float elapsedTime = 0;
@@ -22,9 +24,10 @@ public class Spawner : MonoBehaviour {
 
         elapsedTime += Time.deltaTime;
 
-        if (objectsCounter < maxObjects)
+        if (objectsCounter < maxObjects && elapsedTime > spawnTimeGap)
         {
-            if (elapsedTime > spawnTimeGap)
+            float dist = (transform.position - spawnTarget.transform.position).magnitude;
+            if (dist > spawnMinArea && dist <= spawnMaxArea)
             {
                 Spawn();
                 elapsedTime = 0;
@@ -32,6 +35,12 @@ public class Spawner : MonoBehaviour {
         }
 
 	}
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, spawnMinArea);
+        Gizmos.DrawWireSphere(transform.position, spawnMaxArea);
+    }
 
     public void OnObjectDestroyed()
     {
