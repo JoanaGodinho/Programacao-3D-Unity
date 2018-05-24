@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour {
 
     public float speed;
     public int damage = 10;
+    public int seekDistance = 10;
 
     private Spawner spawner;
     private Seek seek;
@@ -37,6 +38,6 @@ public class Enemy : MonoBehaviour {
     public void setTarget(GameObject target)
     {  
         this.target = target;
-        seek = new Seek(transform, this.target.transform, speed);
+        seek = new Seek(transform, this.target.transform, speed, seekDistance);
     }
 }
