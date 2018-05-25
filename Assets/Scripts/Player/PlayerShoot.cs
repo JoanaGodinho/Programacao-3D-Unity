@@ -30,15 +30,14 @@ public class PlayerShoot : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-
+            Player player = GetComponent<Player>();
             // If hit
-            if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range, layerMask))
+            if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range, layerMask) && player.bullets > 0)
             {
                 if (hit.transform.gameObject.layer == enemyLayer)
                 {
                     Instantiate(bloodParticles, hit.point, Quaternion.identity);
                     Destroy(hit.collider.gameObject);
-                    Player player = GetComponent<Player>();
                     player.addScore(1);
                 }
                 else
@@ -46,6 +45,8 @@ public class PlayerShoot : MonoBehaviour {
                     Instantiate(sparkParticles, hit.point, Quaternion.identity);
                     Debug.Log(LayerMask.LayerToName(hit.transform.gameObject.layer));
                 }
+                player.decreaseBullets();
+
             }
         }
     }

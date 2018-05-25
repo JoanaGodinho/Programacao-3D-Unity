@@ -15,9 +15,11 @@ public class Player : MonoBehaviour {
 
     public int score = 0;
     public int health = 100;
+    public int bullets = 15;
 
     public Text healthText;
     public Text scoreText;
+    public Text bulletsText;
 
     private int defaultHealth;
 
@@ -28,7 +30,9 @@ public class Player : MonoBehaviour {
         // Set Texts
         healthText.text = HEALTH_TAG + ": " + health;
         scoreText.text = SCORE_TAG + ": " + score;
-	}
+        bulletsText.text = "" + bullets;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -49,6 +53,12 @@ public class Player : MonoBehaviour {
     {
         this.score += addedScore;
         scoreText.text = SCORE_TAG + ": " + score;
+    }
+
+    public void decreaseBullets()
+    {
+        this.bullets--;
+        bulletsText.text = "" + bullets;
     }
 
     public void dealDamamge(int damage)
