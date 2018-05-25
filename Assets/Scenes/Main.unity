@@ -29114,27 +29114,6 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 689750154}
-    - target: {fileID: 114685268796154294, guid: 57f1a90827212924e80621315368d9c9,
-        type: 2}
-      propertyPath: cena
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114031700580150522, guid: 57f1a90827212924e80621315368d9c9,
-        type: 2}
-      propertyPath: sensitivityH
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114031700580150522, guid: 57f1a90827212924e80621315368d9c9,
-        type: 2}
-      propertyPath: sensitivityV
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114719997687976124, guid: 57f1a90827212924e80621315368d9c9,
-        type: 2}
-      propertyPath: bloodParticles
-      value: 
-      objectReference: {fileID: 198649138932539326, guid: 70bebb8bd81912f4d8348e1c57206bbd,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57f1a90827212924e80621315368d9c9, type: 2}
   m_IsPrefabParent: 0
