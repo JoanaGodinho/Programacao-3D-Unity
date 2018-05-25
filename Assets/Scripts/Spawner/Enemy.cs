@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
 
@@ -8,21 +9,20 @@ public class Enemy : MonoBehaviour {
     public int damage = 10;
     public int seekDistance = 10;
 
+    NavMeshAgent nav;
     private Spawner spawner;
     private Seek seek;
     private GameObject target;
 
     // Use this for initialization
-    void Start ()
+    void Awake ()
     {
+        nav = GetComponent<NavMeshAgent>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (seek != null)
-        {
-            seek.Update();
-        }
+        nav.SetDestination(target.transform.position);
 	}
 
     private void OnDestroy()
