@@ -59,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1631764136770180}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -9.86, y: 1, z: -12.65}
+  m_LocalPosition: {x: -0, y: 2.66, z: -4.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4312108966089700}
@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81cf36622405264bb89943d20edc2bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivityH: 1
-  sensitivityV: 1
+  sensitivityH: 3
+  sensitivityV: 3
   playerCamera: {fileID: 20905664889721120}
 --- !u!114 &114046187154248760
 MonoBehaviour:
@@ -190,8 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64ccb53e75e04c48866e9e620656480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kills: 0
+  score: 0
   health: 100
+  healthText: {fileID: 0}
+  scoreText: {fileID: 0}
 --- !u!114 &114719997687976124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,6 +209,10 @@ MonoBehaviour:
   damage: 10
   range: 50
   camera: {fileID: 20905664889721120}
+  bloodParticles: {fileID: 198649138932539326, guid: 70bebb8bd81912f4d8348e1c57206bbd,
+    type: 2}
+  sparkParticles: {fileID: 198649138932539326, guid: 085573646bf433c47b7a0900bd64be16,
+    type: 2}
 --- !u!124 &124094590234277886
 Behaviour:
   m_ObjectHideFlags: 1

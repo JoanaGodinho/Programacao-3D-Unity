@@ -13,12 +13,16 @@ public class PlayerShoot : MonoBehaviour {
 
     private int layerMask = 1;
     private int enemyLayer;
+    private int playerLayer;
 
 	// Use this for initialization
 	void Start () {
         // Add Enemy Layer
-        layerMask = layerMask << 10;
         enemyLayer = LayerMask.NameToLayer("Enemy");
+        playerLayer = LayerMask.NameToLayer("Player");
+
+        // Avoid Player Layer
+        layerMask = ~(1 << playerLayer);
 	}
 	
 	// Update is called once per frame
@@ -36,6 +40,11 @@ public class PlayerShoot : MonoBehaviour {
                     Destroy(hit.collider.gameObject);
                     Player player = GetComponent<Player>();
                     player.addScore(1);
+                }
+                else
+                {
+                    Instantiate(sparkParticles, hit.point, Quaternion.identity);
+                    Debug.Log(LayerMask.LayerToName(hit.transform.gameObject.layer));
                 }
             }
         }
