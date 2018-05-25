@@ -12,11 +12,13 @@ public class PlayerShoot : MonoBehaviour {
     public ParticleSystem sparkParticles;
 
     private int layerMask = 1;
+    private int enemyLayer;
 
 	// Use this for initialization
 	void Start () {
         // Add Enemy Layer
         layerMask = layerMask << 10;
+        enemyLayer = LayerMask.NameToLayer("Enemy");
 	}
 	
 	// Update is called once per frame
@@ -28,10 +30,13 @@ public class PlayerShoot : MonoBehaviour {
             // If hit
             if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range, layerMask))
             {
-                Instantiate(bloodParticles, hit.point, Quaternion.identity);
-                Destroy(hit.collider.gameObject);
-                Player player = GetComponent<Player>();
-                player.addScore(1);
+                if (hit.transform.gameObject.layer == enemyLayer)
+                {
+                    Instantiate(bloodParticles, hit.point, Quaternion.identity);
+                    Destroy(hit.collider.gameObject);
+                    Player player = GetComponent<Player>();
+                    player.addScore(1);
+                }
             }
         }
     }
