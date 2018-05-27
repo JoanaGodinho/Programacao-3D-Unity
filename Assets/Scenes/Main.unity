@@ -17109,7 +17109,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh599638
+  m_Name: pb_Mesh-4860
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -22212,7 +22212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d401a92cc5e7b45a8ac877a5311d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
 --- !u!4 &852819183 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 8ffc42e4c3db82e45878fb94755c8359, type: 2}
@@ -27055,58 +27055,6 @@ Prefab:
       propertyPath: bulletsText
       value: 
       objectReference: {fileID: 1093069131}
-    - target: {fileID: 1369656258808656, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837933688878122, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837933688878122, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4837933688878122, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855679392156998, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855679392156998, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855679392156998, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244343801356078, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855679392156998, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4196552760718352, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1520047390118630, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1727506248812164, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795762576148814, guid: 57f1a90827212924e80621315368d9c9, type: 2}
-      propertyPath: m_TagString
-      value: WeaponController
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57f1a90827212924e80621315368d9c9, type: 2}
   m_IsPrefabParent: 0
@@ -49207,7 +49155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d401a92cc5e7b45a8ac877a5311d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
 --- !u!1001 &1741439100
 Prefab:
   m_ObjectHideFlags: 0
@@ -51415,7 +51363,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh593620
+  m_Name: pb_Mesh-4862
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

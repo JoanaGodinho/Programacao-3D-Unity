@@ -3912,6 +3912,7 @@ MonoBehaviour:
   AmbientInterval: {x: 2.5, y: 7.5}
   PositionExitOffset: {x: 0, y: -1, z: 0}
   RotationExitOffset: {x: 40, y: 0, z: 0}
+  DoSpringsInLateUpdate: 0
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4161,6 +4162,7 @@ MonoBehaviour:
   AmbientInterval: {x: 2.5, y: 7.5}
   PositionExitOffset: {x: 0, y: -1, z: 0}
   RotationExitOffset: {x: 40, y: 0, z: 0}
+  DoSpringsInLateUpdate: 0
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4386,6 +4388,7 @@ MonoBehaviour:
   AmbientInterval: {x: 2.5, y: 7.5}
   PositionExitOffset: {x: 0, y: -1, z: 0}
   RotationExitOffset: {x: 40, y: 0, z: 0}
+  DoSpringsInLateUpdate: 0
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4449,29 +4452,13 @@ MonoBehaviour:
   Background: {fileID: 2800000, guid: 6da7eead4121c784b9eeca88107cd164, type: 3}
   HealthIcon: {fileID: 2800000, guid: c98bf25622f106947b63a571142e7b92, type: 3}
   HealthMultiplier: 10
-  HealthColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  HealthColor: {r: 1, g: 1, b: 1, a: 1}
   HealthLowLevel: 2.5
-  HealthLowColor:
-    r: 0.75
-    g: 0
-    b: 0
-    a: 1
+  HealthLowColor: {r: 0.75, g: 0, b: 0, a: 1}
   HealthLowSound: {fileID: 8300000, guid: 4c6b73b258f31be49b68a524831cd910, type: 3}
   HealthLowSoundInterval: 1
-  AmmoColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  AmmoLowColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+  AmmoColor: {r: 1, g: 1, b: 1, a: 1}
+  AmmoLowColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &11400036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4546,7 +4533,7 @@ MonoBehaviour:
   SpawnOnAwake: 0
   SpawnSound: {fileID: 8300000, guid: c6ffb5ccbd00a114494143e33e747a05, type: 3}
   SpawnFXPrefabs: []
-  helpbox: 144
+  helpbox: 155
 --- !u!114 &11400042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4602,6 +4589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ImageCrosshair: {fileID: 2800000, guid: 5e0ebfc51683e684f9c20e69eb644f62, type: 3}
+  Hide: 0
   HideOnFirstPersonZoom: 1
   HideOnDeath: 1
 --- !u!114 &11400050
@@ -4670,16 +4658,19 @@ MonoBehaviour:
   Renderers: []
   AudioSources: []
   MouseLookSensitivity: {x: 5, y: 5}
+  MouseLookMutePitch: 0
+  MouseLookMuteYaw: 0
   MouseLookSmoothSteps: 10
   MouseLookSmoothWeight: 0.5
   MouseLookAcceleration: 0
   MouseLookAccelerationThreshold: 0.4
   MouseLookInvert: 0
   MouseCursorZones:
-  - x: 0
+  - serializedVersion: 2
+    x: 0
     y: 0
-    width: 32
-    height: 10000
+    width: 0
+    height: 0
   MouseCursorForced: 0
   MouseCursorBlocksMouseLook: 1
 --- !u!114 &11400056
@@ -4983,6 +4974,7 @@ MonoBehaviour:
   AmbientInterval: {x: 2.5, y: 7.5}
   PositionExitOffset: {x: 0, y: -1, z: 0}
   RotationExitOffset: {x: 40, y: 0, z: 0}
+  DoSpringsInLateUpdate: 0
 --- !u!114 &11400064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5072,6 +5064,15 @@ MonoBehaviour:
   BobRequireGroundContact: 1
   BobStepThreshold: 10
   HasCollision: 1
+  MuteRoll: 0
+  MuteBob: 0
+  MuteShakes: 0
+  MuteEarthquakes: 0
+  MuteBombShakes: 0
+  MuteFallImpacts: 0
+  MuteHeadImpacts: 0
+  MuteGroundStomps: 0
+  DisableVRModeOnStartup: 0
 --- !u!114 &11400066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5128,7 +5129,7 @@ MonoBehaviour:
   DisableSpin: 0
   TossSounds: []
   ExtraPickups: []
-  surfaceTypeHelp: 128
+  surfaceTypeHelp: 139
 --- !u!114 &11439970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5143,7 +5144,7 @@ MonoBehaviour:
   SurfaceType: {fileID: 11400000, guid: d5038622b1b2a6f43874b4c45ddadc71, type: 2}
   AllowDecals: 0
   SurfaceID: 0
-  surfaceTypeHelp: 150
+  surfaceTypeHelp: 172
 --- !u!114 &11453304
 MonoBehaviour:
   m_ObjectHideFlags: 1
