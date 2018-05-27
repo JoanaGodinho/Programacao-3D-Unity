@@ -37,8 +37,9 @@ public class PlayerShoot : MonoBehaviour {
                 if (hit.transform.gameObject.layer == enemyLayer)
                 {
                     Instantiate(bloodParticles, hit.point, Quaternion.identity);
-                    Destroy(hit.collider.gameObject);
-                    player.addScore(1);
+                    Enemy enemy = hit.collider.GetComponent<Enemy>();
+                    if (enemy.getHit(10) == 1)
+                        player.addScore(1);
                 }
                 else
                 {

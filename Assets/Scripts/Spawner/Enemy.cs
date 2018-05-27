@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour {
     public float speed;
     public int damage = 10;
     public int seekDistance = 10;
+    public int HP = 50;
 
     NavMeshAgent nav;
     private Spawner spawner;
@@ -29,7 +30,17 @@ public class Enemy : MonoBehaviour {
     {
         spawner.OnObjectDestroyed();
     }
-
+    
+    public int getHit(int dmg)
+    {
+        HP -= dmg;
+        print(HP);
+        if (HP <= 0) {
+            Destroy(this.gameObject);
+            return 1;
+        }
+        return 0;
+    }
     public void setSpawner(Spawner spawner)
     {
         this.spawner = spawner;

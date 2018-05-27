@@ -215,6 +215,7 @@ MonoBehaviour:
   Amount: 6
   m_Item:
     Type: {fileID: 11400000, guid: 26d4f2d91288b9e45ba418604058a404, type: 2}
+    GiveOnContact: 1
     helpbox: 199
   m_Recipient:
     Tags: []
@@ -251,7 +252,7 @@ MonoBehaviour:
   SpawnOnAwake: 0
   SpawnSound: {fileID: 0}
   SpawnFXPrefabs: []
-  helpbox: 166
+  helpbox: 155
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
