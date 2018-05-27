@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5f5297db043e440aed3e8084caf0d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  helpbox: 84
+  helpbox: 73
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -353,6 +353,7 @@ MonoBehaviour:
   Renderers: []
   AudioSources: []
   Weapon3rdPersonModel: {fileID: 0}
+  Weapon3rdPersonInvisibleMaterial: {fileID: 0}
   PositionOffset: {x: 0.1493672, y: -0.2665937, z: 0.1704005}
   PositionSpring2Stiffness: 0.2
   PositionSpring2Damping: 0.5615942
@@ -425,6 +426,7 @@ MonoBehaviour:
   AmbientInterval: {x: 2.5, y: 7.5}
   PositionExitOffset: {x: 0, y: -1, z: 0}
   RotationExitOffset: {x: 40, y: 0, z: 0}
+  DoSpringsInLateUpdate: 0
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -469,6 +471,7 @@ MonoBehaviour:
   ProjectileCount: 1
   ProjectileSpread: 1
   ProjectileSourceIsRoot: 1
+  FireMessage: 
   MuzzleFlashPosition: {x: 0, y: 0, z: 0}
   MuzzleFlashScale: {x: 0.2, y: 0.2, z: 0.2}
   MuzzleFlashFadeSpeed: 0.075
@@ -601,6 +604,8 @@ MonoBehaviour:
   Renderers: []
   AudioSources: []
   MouseLookSensitivity: {x: 5, y: 5}
+  MouseLookMutePitch: 0
+  MouseLookMuteYaw: 0
   MouseLookSmoothSteps: 10
   MouseLookSmoothWeight: 0.5
   MouseLookAcceleration: 0
@@ -704,6 +709,15 @@ MonoBehaviour:
   BobRequireGroundContact: 1
   BobStepThreshold: 10
   HasCollision: 1
+  MuteRoll: 0
+  MuteBob: 0
+  MuteShakes: 0
+  MuteEarthquakes: 0
+  MuteBombShakes: 0
+  MuteFallImpacts: 0
+  MuteHeadImpacts: 0
+  MuteGroundStomps: 0
+  DisableVRModeOnStartup: 0
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1

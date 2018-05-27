@@ -15,11 +15,9 @@ public class Player : MonoBehaviour {
 
     public int score = 0;
     public int health = 100;
-    public int bullets = 15;
 
     public Text healthText;
     public Text scoreText;
-    public Text bulletsText;
 
     private int defaultHealth;
 
@@ -30,7 +28,6 @@ public class Player : MonoBehaviour {
         // Set Texts
         healthText.text = HEALTH_TAG + ": " + health;
         scoreText.text = SCORE_TAG + ": " + score;
-        bulletsText.text = "" + bullets;
 
     }
 	
@@ -41,6 +38,7 @@ public class Player : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        print("entered");
         Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
         if (enemy != null)
@@ -55,14 +53,9 @@ public class Player : MonoBehaviour {
         scoreText.text = SCORE_TAG + ": " + score;
     }
 
-    public void decreaseBullets()
-    {
-        this.bullets--;
-        bulletsText.text = "" + bullets;
-    }
-
     public void dealDamamge(int damage)
     {
+        print(health);
         health -= damage;
 
         if (health <= 0)
@@ -88,6 +81,8 @@ public class Player : MonoBehaviour {
     private void OnPlayerDead()
     {
         PlayerStats.score = this.score;
+        GetComponent<vp_FPInput>().MouseCursorForced = true;
         SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
+
     }
 }

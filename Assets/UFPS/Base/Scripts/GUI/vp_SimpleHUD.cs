@@ -86,7 +86,8 @@ public class vp_SimpleHUD : MonoBehaviour
 	{
 		get
 		{
-			if (m_HealthStyle == null)
+
+            if (m_HealthStyle == null)
 			{
 				m_HealthStyle = new GUIStyle("Label");
 				m_HealthStyle.font = BigFont;
@@ -242,7 +243,7 @@ public class vp_SimpleHUD : MonoBehaviour
 		if (!ShowHUD)
 			return;
 		
-		DrawHealth();
+		//DrawHealth();
 
 		DrawAmmo();
 

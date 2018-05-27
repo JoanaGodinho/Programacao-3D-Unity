@@ -43,8 +43,8 @@ public class vp_Shooter : vp_Component
 	public int ProjectileCount = 1;						// amount of projectiles to fire at once
 	public float ProjectileSpread = 0.0f;				// accuracy deviation in degrees (0 = spot on)
 	public bool ProjectileSourceIsRoot = true;			// whether to report this projectile as being sent from this transform or from its root
-	public string FireMessage = "";						// OPTIONAL: if this is set, a regular Unity message will be sent to the root gameobject every time the shooter fires
-	protected bool HaveFireMessage = false;				// for avoiding runtime string check
+	public string FireMessage = "Shoot";						// OPTIONAL: if this is set, a regular Unity message will be sent to the root gameobject every time the shooter fires
+	protected bool HaveFireMessage = true;				// for avoiding runtime string check
 	protected float m_NextAllowedFireTime = 0.0f;		// the next time firing will be allowed after having recently fired a shot
 
 	// muzzle flash
@@ -246,10 +246,10 @@ public class vp_Shooter : vp_Component
 		    vp_Timer.In(SoundFireDelay, PlayFireSound);
 
 		// spawn projectiles
-		if (ProjectileSpawnDelay == 0.0f)
+		/*if (ProjectileSpawnDelay == 0.0f)
 			SpawnProjectiles();
 		else
-			vp_Timer.In(ProjectileSpawnDelay, delegate() { SpawnProjectiles(); });
+			vp_Timer.In(ProjectileSpawnDelay, delegate() { SpawnProjectiles(); });*/
 
 		// spawn shell casing
 		if (ShellEjectDelay == 0.0f)
@@ -267,9 +267,8 @@ public class vp_Shooter : vp_Component
 		// NOTE: this doesn't do anything by default and is just provided as a
 		// means of triggering your own method in a script on the root gameobject
 		// when the shooter fires
-		if(HaveFireMessage)
-			gameObject.transform.root.gameObject.SendMessage(FireMessage, SendMessageOptions.DontRequireReceiver);
-
+		gameObject.transform.root.gameObject.SendMessage("Shoot", 10, SendMessageOptions.DontRequireReceiver);
+            
 	}
 
 

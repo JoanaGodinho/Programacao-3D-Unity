@@ -27,28 +27,30 @@ public class PlayerShoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-            Player player = GetComponent<Player>();
-            // If hit
-            if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range, layerMask) && player.bullets > 0)
-            {
-                if (hit.transform.gameObject.layer == enemyLayer)
-                {
-                    Instantiate(bloodParticles, hit.point, Quaternion.identity);
-                    Enemy enemy = hit.collider.GetComponent<Enemy>();
-                    if (enemy.getHit(10) == 1)
-                        player.addScore(1);
-                }
-                else
-                {
-                    Instantiate(sparkParticles, hit.point, Quaternion.identity);
-                    Debug.Log(LayerMask.LayerToName(hit.transform.gameObject.layer));
-                }
-                player.decreaseBullets();
 
+    }
+
+    void Shoot()
+    {
+        RaycastHit hit;
+        Player player = GetComponent<Player>();
+        // If hit
+        print(player);
+        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range, layerMask))
+        {
+            if (hit.transform.gameObject.layer == enemyLayer)
+            {
+                Instantiate(bloodParticles, hit.point, Quaternion.identity);
+                Enemy enemy = hit.collider.GetComponent<Enemy>();
+                if (enemy.getHit(10) == 1)
+                    player.addScore(1);
             }
+            else
+            {
+                Instantiate(sparkParticles, hit.point, Quaternion.identity);
+                Debug.Log(LayerMask.LayerToName(hit.transform.gameObject.layer));
+            }
+
         }
     }
 }
