@@ -221,7 +221,7 @@ MonoBehaviour:
   SpawnOnAwake: 0
   SpawnSound: {fileID: 8300000, guid: c6ffb5ccbd00a114494143e33e747a05, type: 3}
   SpawnFXPrefabs: []
-  helpbox: 133
+  helpbox: 155
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,7 +237,8 @@ MonoBehaviour:
   Amount: 6
   m_Item:
     Type: {fileID: 11400000, guid: 29896fc7c28d9004a810cf00f1ad97e1, type: 2}
-    helpbox: 155
+    GiveOnContact: 1
+    helpbox: 166
   m_Recipient:
     Tags: []
     helpbox: 0

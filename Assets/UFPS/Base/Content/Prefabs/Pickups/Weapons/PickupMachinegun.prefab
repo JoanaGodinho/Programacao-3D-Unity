@@ -196,7 +196,7 @@ MonoBehaviour:
   SpawnOnAwake: 0
   SpawnSound: {fileID: 8300000, guid: c6ffb5ccbd00a114494143e33e747a05, type: 3}
   SpawnFXPrefabs: []
-  helpbox: 133
+  helpbox: 155
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +211,7 @@ MonoBehaviour:
   RotationSpeed: {x: 0, y: 90, z: 0}
   Accelerate: 0
   Acceleration: 1
-  helpbox: 78
+  helpbox: 89
   separator: 0
 --- !u!114 &11400004
 MonoBehaviour:
@@ -247,7 +247,8 @@ MonoBehaviour:
   Amount: 50
   m_Item:
     Type: {fileID: 11400000, guid: 2fbc485ea2e99724eb6000259b3f0434, type: 2}
-    helpbox: 155
+    GiveOnContact: 1
+    helpbox: 166
   m_Recipient:
     Tags: []
     helpbox: 89

@@ -215,7 +215,8 @@ MonoBehaviour:
   Amount: 50
   m_Item:
     Type: {fileID: 11400000, guid: c11d93b063eaa9043b51fa3831599c63, type: 2}
-    helpbox: 155
+    GiveOnContact: 1
+    helpbox: 166
   m_Recipient:
     Tags: []
     helpbox: 78
