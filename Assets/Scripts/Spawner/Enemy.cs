@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
 
-    public float speed, timeToAttack, attackTimer;
+    public float speed;
     public int damage = 10;
     public int seekDistance = 10;
     public int HP = 50;
@@ -27,47 +27,14 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         nav.SetDestination(target.transform.position);
-        float distance = Vector3.Distance(transform.position, target.transform.position);
-        if (distance < 3)
-        {
-            attackTimer += Time.deltaTime;
-        }
-        else if (attackTimer > 0)
-        {
-            attackTimer -= Time.deltaTime * 2;
-        }
-        else
-        {
-            attackTimer = 0;
-        }
 	}
 
-    bool Attack()
-    {
-        if (attackTimer > timeToAttack)
-        {
-            attackTimer = 0;
-            return true;
-        }
-        return false;
-    }
+   
     private void OnDestroy()
     {
         spawner.OnObjectDestroyed();
     }
 
-    void OnCollistionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            if (Attack())
-            {
-                //collision.collider.SendMessageUpwards("dealDamage", this.damage, SendMessageOptions.RequireReceiver);
-            }
-                
-
-        }
-    }
 
     public int getHit(int dmg)
     {
