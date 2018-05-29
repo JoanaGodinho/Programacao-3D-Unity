@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4354152740461560}
   - component: {fileID: 33776568467063264}
   - component: {fileID: 23476360054644138}
+  - component: {fileID: 65534999765455976}
   m_Layer: 0
   m_Name: office chair 2
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1652642801811218}
   m_Mesh: {fileID: 4300000, guid: ba04b7b5af94fa148bd5150b71a54bc1, type: 3}
+--- !u!65 &65534999765455976
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1652642801811218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1522248, y: 1.54558, z: 2.0726163}
+  m_Center: {x: 0.00000005960464, y: 0, z: 0.00000005960465}
